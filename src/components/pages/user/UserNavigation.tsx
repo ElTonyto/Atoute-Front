@@ -6,8 +6,9 @@ const UserNavigation: React.FC = () => (
     <section id="sidebar">
         <div id="sidebar-nav">
             <ul>
-                <li><Link to="/user">Profil</Link></li>
+                <li><Link to="/user/">Profil</Link></li>
                 <li><Link to="/user/candidatures">Candidatures</Link></li>
+                <li><Link to="/offer/new">Nouvelle Offre</Link></li>
             </ul>
         </div>
     </section>
