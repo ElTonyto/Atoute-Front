@@ -8,6 +8,8 @@ import VerifyAccount from "../components/pages/auth/VerifyAccount"
 import UserProfile from "../components/pages/user/UserProfile"
 import UserEdit from "../components/pages/user/UserEdit"
 
+import CreateOffer from "../components/pages/offer/CreateOffer"
+
 const Routes: React.FC = () => (
     <Switch>
         <Route exact path="/login" component={Login} />
@@ -18,6 +20,8 @@ const Routes: React.FC = () => (
 
         <Route exact path="/user" component={UserProfile} />
         <Route exact path="/user/edit" component={UserEdit} />
+
+        <Route exact path="/offer/new" component={CreateOffer} />
     </Switch>
 )
 
