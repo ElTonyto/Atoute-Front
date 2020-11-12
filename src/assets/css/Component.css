@@ -1,0 +1,40 @@
+/* ============ */
+/* Buttons Area */
+/* ============ */
+#btn-grid a, #btn-grid button{
+  margin-right: 20px;
+}
+
+.btn-primary {
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  font-size: 18px;
+  background-color: #4EAFA4;
+}
+a.btn-primary {
+    display: block;
+}
+
+.btn-danger {
+width: fit-content;
+border: none;
+border-radius: 5px;
+margin-top: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+color: white;
+font-size: 18px;
+background-color: #CA432B;
+}
+a.btn-danger {
+  display: block;
+}

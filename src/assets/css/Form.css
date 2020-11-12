@@ -1,0 +1,82 @@
+body {
+    background-color: white;
+}
+.form {
+    background-color: white;
+    margin-left: 350px;
+    padding: 20px 30px;
+}
+
+.form h1 {  
+    font-size: 25px;
+}
+.form p {
+    font-size: 16px;
+    text-align: center;
+}
+.form-link {
+    color: #4EAFA4;
+    margin-left: 5px;
+}
+
+/* .form-change-auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 25px;
+} */
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+.form-input {
+    border-radius: 5px;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    background-color: rgb(247, 247, 247);
+    color: black;
+    border: 2px solid rgb(240, 240, 240);
+}
+
+.form-input-disable {
+    color: rgb(114, 114, 114);
+}
+
+.form-input-disable:hover {
+    cursor: no-drop;
+}
+
+.form-forget-password {
+    color: #4EAFA4;
+    margin-bottom: 10px;
+}
+
+.form-input:focus {
+    background-color: white;
+    border: 2px solid #4EAFA4;
+    outline: none;
+}
+
+.form-submit {
+    width: fit-content;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: #4EAFA4;
+}
+
+.form-submit:hover {
+    border: #4EAFA4 2px solid;
+    background-color: #449b91;
+    cursor: pointer;
+}
+
