@@ -1,0 +1,47 @@
+image: gitlab/dind
+
+stages:
+  - verify
+  - build
+  - deploy
+
+.before_script_template:
+  before_script:
+    # Setup SSH deploy keys
+    - 'which ssh-agent || ( apt-get install -qq openssh-client )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$PRIVATE_SSH_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+    # Connection to Docker Hub
+    - docker info
+    - docker login registry.gitlab.com -u lucasconsejo -p TdQLTdyVMnL_D-NzqVRW
+
+lint:
+  image: node
+  type: verify
+  script:
+    - npm install -g eslint
+    - npm install eslint-plugin-react@latest --save-dev
+    - eslint -c ./.eslintrc.js src
+
+test: 
+  image: weboaks/node-karma-protractor-chrome
+  type: verify
+  script:
+    - npm install --silent
+    - npm run test
+
+build:
+  extends: .before_script_template
+  type: build
+  script:
+    - docker build -t registry.gitlab.com/atoute/front/app .
+    - docker push registry.gitlab.com/atoute/front/app
+
+deploy:
+  extends: .before_script_template
+  type: deploy 
+  script:
+    - ssh root@206.189.201.153 "/atoute/front/deploy.sh && exit"

@@ -1,0 +1,16 @@
+.easter-egg-container {
+    right: 0px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.easter-egg-container p {
+    width: 250px;
+}
